@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add/Edit Employee</title>
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+  <div class="form-container">
+
+    <!-- EDIT FORM (only shown when ?id=...) -->
+    <div id="edit-form-section" style="display: none;">
+      <h2>Edit Employee</h2>
+      <form id="edit-employee-form">
+        <input type="text" id="first-name" placeholder="First Name" required />
+        <input type="text" id="last-name" placeholder="Last Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="text" id="department" placeholder="Department" required />
+        <input type="text" id="role" placeholder="Role" required />
+        <div class="form-actions">
+          <button type="button" id="cancel-edit">Cancel</button>
+          <button type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- ADD FORM (default shown if no id param) -->
+    <div id="add-form-section">
+      <h2>Add Employee</h2>
+      <form id="add-employee-form">
+        <input type="text" id="add-first-name" placeholder="First Name" required />
+        <input type="text" id="add-last-name" placeholder="Last Name" required />
+        <input type="email" id="add-email" placeholder="Email" required />
+        <input type="text" id="add-department" placeholder="Department" required />
+        <input type="text" id="add-role" placeholder="Role" required />
+        <div class="form-actions">
+          <button type="button" id="cancel-add">Cancel</button>
+          <button type="submit">Add</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="static/js/data.js"></script>
+  <script src="static/js/form.js"></script>
+</body>
+</html>

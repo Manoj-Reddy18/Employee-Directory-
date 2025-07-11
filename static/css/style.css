@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f7f7f7;
+}
+
+.header {
+  background-color: #2c2c2c;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.add-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.employee-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+}
+
+.employee-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+.employee-card button {
+  margin-right: 5px;
+  padding: 5px 10px;
+}
+
+.footer {
+  background-color: #2c2c2c;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* Form Page */
+.form-container {
+  background-color: white;
+  padding: 30px;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-actions button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.form-actions button:last-child {
+  background-color: #007bff;
+  color: white;
+}
+.filter-section {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: #f9f9f9;
+  display: none;
+}
+
+.filter-section input {
+  margin: 5px;
+  padding: 8px;
+}
+.filter-section button {
+  margin: 5px;
+}
