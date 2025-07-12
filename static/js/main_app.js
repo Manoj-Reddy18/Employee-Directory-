@@ -20,6 +20,7 @@ function renderEmployees(data) {
 
 function deleteEmployee(id) {
   employees = employees.filter(emp => emp.id !== id);
+  localStorage.setItem("employees", JSON.stringify(employees));
   renderEmployees(employees);
 }
 

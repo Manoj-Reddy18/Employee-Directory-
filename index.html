@@ -17,48 +17,57 @@
     </div>
   </header>
 
-  <!-- Filter Section (Hidden Initially) -->
-  <section id="filter-section" class="filter-section" style="display: none;">
-    <h3>Filter Employees</h3>
-    <input type="text" id="filter-firstName" placeholder="Filter by First Name" />
-    <input type="text" id="filter-department" placeholder="Filter by Department" />
-    <input type="text" id="filter-role" placeholder="Filter by Role" />
-    <button id="apply-filter">Apply Filter</button>
-    <button id="reset-filter">Reset</button>
-  </section>
+  <!-- Main layout: left content + right sidebar -->
+  <div class="main-container">
 
-  <!-- Controls: Sort, Show Count, Add -->
-  <section class="controls">
-    <div>
-      Sort:
-      <select id="sortSelect">
-        <option value="">--Select--</option>
-        <option value="firstName">First Name</option>
-        <option value="department">Department</option>
-      </select>
-    </div>
-    <div>
-      Show:
-      <select id="showCount">
-        <option value="10">10</option>
-        <option value="25">25</option>
-        <option value="50">50</option>
-      </select>
-    </div>
-    <a href="add-edit.html"><button class="add-btn">Add Employee</button></a>
-  </section>
+    <!-- Left Side: Sort, Add, Employee List -->
+    <div class="main-content">
 
-  <!-- Employee List -->
-  <section id="employee-list" class="employee-list">
-    <!-- Employee cards inserted here via JavaScript -->
-  </section>
+      <!-- Controls -->
+      <section class="controls">
+        <div>
+          Sort:
+          <select id="sortSelect">
+            <option value="">--Select--</option>
+            <option value="firstName">First Name</option>
+            <option value="department">Department</option>
+          </select>
+        </div>
+        <div>
+          Show:
+          <select id="showCount">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+          </select>
+        </div>
+        <a href="add-edit.html"><button class="add-btn">Add Employee</button></a>
+      </section>
+
+      <!-- Employee Cards -->
+      <section id="employee-list" class="employee-list">
+        <!-- JavaScript will insert employee cards here -->
+      </section>
+    </div>
+
+    <!-- Right Sidebar: Filter Form -->
+    <aside id="filter-section" class="filter-section" style="display: none;">
+      <h3>Filter Employees</h3>
+      <input type="text" id="filter-firstName" placeholder="Filter by First Name" />
+      <input type="text" id="filter-department" placeholder="Filter by Department" />
+      <input type="text" id="filter-role" placeholder="Filter by Role" />
+      <button id="apply-filter">Apply Filter</button>
+      <button id="reset-filter">Reset</button>
+    </aside>
+
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
     <p>© 2025 Employee Directory App. All rights reserved.</p>
   </footer>
 
-  <!-- JS Files -->
+  <!-- Scripts -->
   <script src="static/js/data.js"></script>
   <script src="static/js/main_app.js"></script>
 </body>

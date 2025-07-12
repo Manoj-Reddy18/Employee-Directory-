@@ -34,6 +34,7 @@ if (id) {
 
     const index = employees.findIndex(e => e.id === id);
     employees[index] = updatedEmp;
+    localStorage.setItem("employees", JSON.stringify(employees));
 
     window.location.href = "index.html";
   });
@@ -60,6 +61,7 @@ if (id) {
     };
 
     employees.push(newEmp);
+    localStorage.setItem("employees", JSON.stringify(employees));
     window.location.href = "index.html";
   });
 
