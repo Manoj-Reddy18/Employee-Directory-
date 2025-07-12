@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Required meta tags -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Page title -->
   <title>Add/Edit Employee</title>
+
+  <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="static/css/style.css" />
 </head>
 <body>
+
+  <!-- ======================== FORM CONTAINER ======================== -->
   <div class="form-container">
 
-    <!-- EDIT FORM (only shown when ?id=...) -->
+    <!-- ======================== EDIT FORM ======================== -->
+    <!-- This section is hidden by default and only shown when a URL contains ?id=... -->
     <div id="edit-form-section" style="display: none;">
       <h2>Edit Employee</h2>
+
+      <!-- Edit Form -->
       <form id="edit-employee-form">
+        <!-- Input fields prefilled with existing employee data -->
         <input type="text" id="first-name" placeholder="First Name" required />
         <input type="text" id="last-name" placeholder="Last Name" required />
         <input type="email" id="email" placeholder="Email" required />
         <input type="text" id="department" placeholder="Department" required />
         <input type="text" id="role" placeholder="Role" required />
+
+        <!-- Action buttons for edit form -->
         <div class="form-actions">
           <button type="button" id="cancel-edit">Cancel</button>
           <button type="submit">Save</button>
@@ -25,15 +38,21 @@
       </form>
     </div>
 
-    <!-- ADD FORM (default shown if no id param) -->
+    <!-- ======================== ADD FORM ======================== -->
+    <!-- This section is visible by default and used to add new employees -->
     <div id="add-form-section">
       <h2>Add Employee</h2>
+
+      <!-- Add Form -->
       <form id="add-employee-form">
+        <!-- Blank input fields for new employee -->
         <input type="text" id="add-first-name" placeholder="First Name" required />
         <input type="text" id="add-last-name" placeholder="Last Name" required />
         <input type="email" id="add-email" placeholder="Email" required />
         <input type="text" id="add-department" placeholder="Department" required />
         <input type="text" id="add-role" placeholder="Role" required />
+
+        <!-- Action buttons for add form -->
         <div class="form-actions">
           <button type="button" id="cancel-add">Cancel</button>
           <button type="submit">Add</button>
@@ -43,7 +62,11 @@
 
   </div>
 
+  <!-- ======================== SCRIPT FILES ======================== -->
+  <!-- Contains the global employees array -->
   <script src="static/js/data.js"></script>
+
+  <!-- Contains logic for showing/hiding forms and handling add/edit actions -->
   <script src="static/js/form.js"></script>
 </body>
 </html>
